@@ -2,4 +2,4 @@ import api from "./api";
 
 export const login = (data) => api.post("/auth/login", data);
 export const register = (data) => api.post("/auth/register", data);
-export const getProfile = () => api.get("/users/profile");
+export const getProfile = () => api.get("/user/profile");

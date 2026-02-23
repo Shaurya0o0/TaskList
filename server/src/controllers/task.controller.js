@@ -3,20 +3,23 @@ import Task from "../models/task.model.js";
 
 
 export const getTasks = async (req, res) => {
-  const tasks = await Task.find({ user: req.user._id });
+  const tasks = await Task.find({ user: req.user.id });
   res.json(tasks);
 };
 
 export const createTask = async (req, res) => {
   const task = await Task.create({
     title: req.body.title,
-    user: req.user._id,
+    user: req.user.id,
   });
   res.status(201).json(task);
 };
 
 export const deleteTask = async (req, res) => {
-  await Task.findByIdAndDelete(req.params.id);
+  await Task.findOneAndDelete({
+    _id: req.params.id,
+    user: req.user.id,
+  });
   res.json({ message: "Deleted" });
 };
 
