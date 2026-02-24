@@ -48,16 +48,6 @@ This app allows users to securely manage daily tasks with authentication and pro
 
 ---
 
-## 📂 Project Structure
-
-TaskList/
-│
-├── client/                # Frontend (React + Vite)
-├── server/                # Backend (Node.js + Express)
-└── README.md
-
----
-
 ## ⚡ Getting Started (Local Development)
 
 ### 1️⃣ Clone the Repository
@@ -145,7 +135,6 @@ VITE_API_URL=
 Contributions are welcome!  
 Fork the repository and submit a pull request.
 
----
 ---
 
 ⭐ If you like this project, consider giving it a star!
